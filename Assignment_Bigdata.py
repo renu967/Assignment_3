@@ -92,7 +92,7 @@ if __name__ == "__main__":
 
     redis_host = 'redis-10613.c321.us-east-1-2.ec2.cloud.redislabs.com'
     redis_port = 10613
-    redis_password = 'Bigdata123@'
+    redis_password = os.getenv('REDIS_PASSWORD')
     redis_db = 'Bigdata'
     username = 'default'
     data_importer.load_data_to_redis(
